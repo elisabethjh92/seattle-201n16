@@ -55,19 +55,32 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-    var addition = sum(a, b, c);
-    var multiplication = multiply(a, b, c);
-    var sumAndMultSent = a + ' and ' + b + ' and ' + c + ' sum to ' + addition + '.';
-    var multAndSumSent = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplication + '.';
-    var sumAndMultArray = [addition, sumAndMultSent];
-    var multAndSumArray = [multiplication, multAndSumSent];
-    return sumAndMultArray + multAndSumArray;
-    
-    //eslint-disable-line
+    //var addition = sum(a, b, c);
+    var sum2 = sum(a, b);
+   // console.log(sum2 [0]);
+    var sum3 = sum(sum2[0], c);
+   // console.log(sum3);
+
+    var multiply2 = multiply(a, b);
+    //console.log(multiply2 [0]);
+    var multiply3 = multiply(multiply2[0], c);
+   // console.log(multiply3);
+
+    var sumAndMultSent = a + ' and ' + b + ' and ' + c + ' sum to ' + sum3[0] + '.';
+   // console.log(sumAndMultSent);
+
+    var multAndSumSent = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply3[0] + '.';
+   // console.log(multAndSumSent);
+
+    var sumAndMultArray = [sum3[0], multiply3[0], sumAndMultSent, multAndSumSent];
+    console.log(sumAndMultArray);
+
+    return sumAndMultArray;
 }
+sumAndMultiply(4, 7, 5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-//testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
