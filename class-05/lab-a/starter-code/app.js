@@ -136,7 +136,6 @@ function multiplyArray(multArr) { //eslint-disable-line
 testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
-
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
 // Don't forget to create a new branch for your work on the next question, if you attempt it.
