@@ -133,14 +133,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
-}
-
+    var total = 1;
+    for(var i = 0; i < multArr.length; i++) {
+      total = multiply(multArr[i], total);
+      total = total[0];
+      }
+      var finalArray = [];
+      finalArray.push(total);
+      //console.log(finalArray);
+      var finalMessage = 'The numbers ' + multArr.toString() + ' have a product of ' + total + '.';
+      finalArray.push(finalMessage);
+      //console.log(finalArray);
+      return finalArray; 
+  }
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
-
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
 // Don't forget to create a new branch for your work on the next question, if you attempt it.
