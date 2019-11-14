@@ -1,6 +1,6 @@
 'use strict';
 /////////////////////////////////////
-/* Problem 1 (this is your demo that we'll solve in class)
+/* Problem 1 
 Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
 
 "The sum of 4 and 7 is 11."
@@ -81,7 +81,7 @@ function sumAndMultiply(a, b, c) {
 
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -98,13 +98,26 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
 
+//I received help from Ariel O'Connall (A former Code Fellows student) with this problem. 
+
 function sumArray(sumArr) { //eslint-disable-line
-
-}
-
+  var total = 0;
+  for(var i = 0; i < sumArr.length; i++) {
+  total = sum(sumArr[i],total);
+  total = total[0];
+  }
+  var finalArray = [];
+  finalArray.push(total);
+  //console.log(finalArray);
+  var finalMessage = sumArr.toString() + ' was passed in as an array of numbers, and ' + total + ' is their sum.';
+  finalArray.push(finalMessage);
+  //console.log(finalArray);
+  return finalArray;
+};
+  //sumArray(testArray);
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
