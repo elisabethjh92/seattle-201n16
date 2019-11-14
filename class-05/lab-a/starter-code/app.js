@@ -114,7 +114,6 @@ function sumArray(sumArr) { //eslint-disable-line
   return finalArray;
 };
   //sumArray(testArray);
-
 // Here is the test for sumArray(); uncomment it to run it
 
 testSumArray(testArray);
